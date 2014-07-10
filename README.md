@@ -1,8 +1,8 @@
 Systemd-based Apache2 container in CentOS7
 ==========================================
 
-Invoke like this:
-
+Building and running
+    $ docker build -t httpd_centos7 .
     $ docker run --privileged -ti \
             -v ${PWD}:/var/www/html \
             -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
