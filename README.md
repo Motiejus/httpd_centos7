@@ -15,5 +15,6 @@ Test it:
 
 Change contents of "index.html" (inside or outside the container, without stopping it):
 
+    $ echo 'Happy birthday!' > index.html
     $ curl http://localhost/
     Happy birthday!
