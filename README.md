@@ -3,16 +3,16 @@ Systemd-based Apache2 container in CentOS7
 
 Building and running
 
-  $ docker build -t httpd_centos7 .
-  $ docker run --privileged -ti -v ${PWD}:/var/www/html -p 80:80 httpd_centos7
+    $ docker build -t httpd_centos7 .
+    $ docker run --privileged -ti -v ${PWD}:/var/www/html -p 80:80 httpd_centos7
 
 Test it:
 
-  $ curl http://localhost/
-  Welcome, world!
+    $ curl http://localhost/
+    Welcome, world!
 
 Change contents of "index.html" (inside or outside the container, without stopping it):
 
-  $ echo 'Happy birthday!' > index.html
-  $ curl http://localhost/
-  Happy birthday!
+    $ echo 'Happy birthday!' > index.html
+    $ curl http://localhost/
+    Happy birthday!
