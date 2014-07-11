@@ -1,0 +1,10 @@
+[Unit]
+Description=Simple Py Web Server
+
+[Service]
+Environment=HOME=/var/www/html
+WorkingDirectory=/var/www/html
+ExecStart=/usr/bin/python -m SimpleHTTPServer 80
+
+[Install]
+WantedBy=multi-user.target

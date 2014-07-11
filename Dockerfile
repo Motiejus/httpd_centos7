@@ -1,3 +1,5 @@
 FROM motiejus/systemd_centos7
-RUN yum -y install httpd; yum clean all; systemctl enable httpd.service
+RUN mkdir -p /var/www/html
+ADD pyserver.service /etc/systemd/system/
+RUN systemctl enable pyserver.service
 EXPOSE 80
